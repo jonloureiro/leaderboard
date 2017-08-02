@@ -12,14 +12,15 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
   <div class="page-flexbox-wrapper">
     {{> navbar}}
-    <div class="card">
-        <br><br>
+
         {{#if currentUser}}
+            <div class="card">
             {{> addPlayerForm}}
             {{> leaderboard}}
             {{> buttons}}
+            </div>
         {{/if}}
-    </div>
+
     {{> footer}}
   </div>
 </body>
