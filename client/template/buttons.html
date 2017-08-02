@@ -1,0 +1,8 @@
+<template name="buttons">
+    {{#if selectedPlayer}}
+        <h5>Selected Player: {{selectedPlayer.name}}</h5>
+        <button class="increment">Ganhar 5 pontos</button>
+        <button class="decrement">Perder 5 pontos</button>
+        <button class="remove">Remover jogador</button>
+    {{/if}}
+</template>

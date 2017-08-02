@@ -1,0 +1,13 @@
+<head>
+    <title>LEADERBOARD</title>
+</head>
+
+<body>
+    <ul><h2>Leaderboard</h2></ul>
+    {{> loginButtons}}<br><br>
+    {{#if currentUser}}
+        {{> addPlayerForm}}
+        {{> leaderboard}}
+        {{> buttons}}
+    {{/if}}
+</body>
