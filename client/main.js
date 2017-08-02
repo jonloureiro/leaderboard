@@ -1,3 +1,2 @@
 Meteor.subscribe('thePlayers');
-
-console.log(PlayersList.find().count());
+console.log('Há '+PlayersList.find().count()+' registros.');
