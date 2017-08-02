@@ -1,1 +1,48 @@
+div.card {
+    padding: 30px;
+    position: relative;
+    margin: 0 auto;
+    width: 1200px auto;
+    height: auto;
+}
 
+.btn {
+    background-color: #424242;
+}
+
+.loginbutton {
+    margin-left: 25px;
+}
+
+.loginbutton:hover {
+    background-color: #424242;
+}
+
+.increment:hover {
+  background-color: #5a95f5 !important;
+  color: #fff;
+}
+
+.remove:hover {
+    background-color: #ef5350 !important;
+    color: #fff;
+}
+
+.decrement:hover {
+    background-color: #ffab40 !important;
+    color: #fff;
+}
+
+.btn:focus {
+    background-color: #424242;
+}
+
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}

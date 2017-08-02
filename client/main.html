@@ -1,13 +1,51 @@
+
 <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>LEADERBOARD</title>
 </head>
 
 <body>
-    <ul><h2>Leaderboard</h2></ul>
-    {{> loginButtons}}<br><br>
-    {{#if currentUser}}
-        {{> addPlayerForm}}
-        {{> leaderboard}}
-        {{> buttons}}
-    {{/if}}
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  <div class="page-flexbox-wrapper">
+    {{> navbar}}
+    <div class="card">
+        <br><br>
+        {{#if currentUser}}
+            {{> addPlayerForm}}
+            {{> leaderboard}}
+            {{> buttons}}
+        {{/if}}
+    </div>
+    {{> footer}}
+  </div>
 </body>
+
+<template name="navbar">
+<nav>
+  <div class="nav-wrapper grey darken-3">
+    <a href="#" class="brand-logo center text-lighten-3">Leaderboard</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+    </ul>
+    <div class="loginbutton left">
+        {{> loginButtons}}
+    </div>
+  </div>
+</nav>
+<br><br><br>
+</template>
+
+<template name="footer">
+<br><br><br>
+<footer class="page-footer grey darken-3">
+  <div class="footer-copyright">
+    <div class="container">
+    Copyright (c) 2017 Jonathan Loureiro de Moraes
+    <a class="grey-text text-lighten-4 right" href="https://github.com/jonloureiro/leaderboard/blob/master/LICENSE">MIT License</a>
+    </div>
+  </div>
+</footer>
+</template>
