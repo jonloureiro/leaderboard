@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;
+  background-color: #eee ;
 }
 
 .page-flexbox-wrapper {
@@ -7,21 +7,48 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+@media only screen and (max-width: 768px) {
+  .page-flexbox-wrapper {
+    min-height: 92.9vh;
+  }
+}
+
+div.box {
+  padding: 0;
+  margin: 0 auto auto;
+  vertical-align: top;
+  width: 95%;
+}
 
 /********** CARDS **********/
 
 div.card {
-    background-color: #cfd8dc;
-    padding: 10px;
-    position: relative;
-    display: inline-block;
-    margin: auto;
+  vertical-align:top;
+  text-align: left;
+  background-color: #fff;
+  padding: 15px;
+  position: relative;
+  display: inline-block;
+  margin: 10px 10px 10px;
+  border-radius: 5px;
+  color: #797979;
+  width: 27%;
+  min-width: 360px;
+}
+@media only screen and (max-width: 768px) {
+  div.card {
+    width: 99%;
+    margin: 10px auto 10px;
+  }
 }
 
 /********** BUTTONS **********/
 
 .btn {
-    background-color: #424242;
+  background-color: #424242;
+  display: inline-block;
+  width: 45%;
+  margin: 3px;
 }
 
 .increment:hover {
@@ -30,15 +57,15 @@ div.card {
 }
 
 .remove:hover {
-    background-color: #ef5350 !important;
-    color: #fff;
+  background-color: #ef5350 !important;
+  color: #fff;
 }
 
 .decrement:hover {
-    background-color: #ffab40 !important;
-    color: #fff;
+  background-color: #ffab40 !important;
+  color: #fff;
 }
 
 .btn:focus {
-    background-color: #424242;
+  background-color: #424242;
 }

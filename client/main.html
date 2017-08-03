@@ -10,12 +10,14 @@
 <body>
   <div class="page-flexbox-wrapper">
     {{> navbar}}
+    <div class="box center">
       {{#if currentUser}}
         {{> leaderboard}}
         {{> todos}}
       {{else}}
         {{> home}}
       {{/if}}
+    </div>
     {{> footer}}
   </div>
 </body>
