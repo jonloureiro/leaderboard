@@ -1,0 +1,14 @@
+<template name="todos">
+  <div class="card">
+    {{> todoform}}
+    <ul>
+      {{#each todo}}
+          {{> todoitem}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="todoitem">
+    <li>{{name}}</li>
+</template>

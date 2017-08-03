@@ -1,13 +1,26 @@
 Meteor.methods({
-    'createPlayer': function(playerNameVar){
-        check(playerNameVar, String);
+    'createPlayer': function(nameVar){
+        check(nameVar, String);
         var currentUserId = Meteor.userId();
         if(currentUserId){
             PlayersList.insert({
-                name: playerNameVar,
+                name: nameVar,
                 score: 0,
                 createdBy: currentUserId
             });
         }
-    }
+    },
+
+    'createTodo': function(nameVar){
+      check(nameVar, String);
+      var currentUserId = Meteor.userId();
+      if(currentUserId){
+        Todos.insert({
+            name: nameVar,
+            completed: false,
+            createdAt: new Date(),
+            createdBy: currentUserId
+        });
+      }
+    },
 });
