@@ -14,11 +14,9 @@
     {{> navbar}}
 
         {{#if currentUser}}
-            <div class="card">
-            {{> addPlayerForm}}
             {{> leaderboard}}
-            {{> buttons}}
-            </div>
+        {{else}}
+            {{> home}}
         {{/if}}
 
     {{> footer}}
