@@ -1,10 +1,29 @@
+body {
+    background-color: #000000;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/********** CARDS **********/
+
 div.card {
+    background-color: #cfd8dc;
     padding: 30px;
     position: relative;
     margin: 0 auto;
     width: 1200px auto;
     height: auto;
 }
+
+/********** BUTTONS **********/
 
 .btn {
     background-color: #424242;
@@ -35,14 +54,4 @@ div.card {
 
 .btn:focus {
     background-color: #424242;
-}
-
-.page-flexbox-wrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
 }
