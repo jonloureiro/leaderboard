@@ -6,7 +6,7 @@ Template.leaderboardform.events({
   },
 });
 
-Template.todoform.events({
+Template.todosform.events({
   'submit form': function(event){
     event.preventDefault();
     Meteor.call('createTodo', event.target.todoName.value);
