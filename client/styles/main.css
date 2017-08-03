@@ -2,10 +2,6 @@ body {
     background-color: #000000;
 }
 
-main {
-  flex: 1 0 auto;
-}
-
 .page-flexbox-wrapper {
   display: flex;
   min-height: 100vh;
@@ -16,24 +12,15 @@ main {
 
 div.card {
     background-color: #cfd8dc;
-    padding: 30px;
+    padding: 10px;
     position: relative;
-    margin: 0 auto;
-    width: 1200px auto;
-    height: auto;
+    display: inline-block;
+    margin: auto;
 }
 
 /********** BUTTONS **********/
 
 .btn {
-    background-color: #424242;
-}
-
-.loginbutton {
-    margin-left: 25px;
-}
-
-.loginbutton:hover {
     background-color: #424242;
 }
 
