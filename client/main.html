@@ -1,4 +1,3 @@
-
 <head>
   <title>LEADERBOARD</title>
   <meta name="theme-color" content="#424242">
@@ -7,17 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<body>
+<template name="main">
   <div class="page-flexbox-wrapper">
     {{> navbar}}
     <div class="box center">
-      {{#if currentUser}}
-        {{> leaderboard}}
-        {{> todos}}
-      {{else}}
-        {{> home}}
-      {{/if}}
+      {{> yield}}
     </div>
     {{> footer}}
   </div>
-</body>
+</template>

@@ -4,3 +4,5 @@ meteor add accounts-ui
 meteor remove autopublish
 meteor remove insecure
 meteor add check
+meteor add iron:router
+meteor add materialize:materialize@=0.99.0

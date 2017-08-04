@@ -22,3 +22,4 @@ accounts-password@1.4.0
 accounts-ui@1.1.9
 check@1.2.5
 materialize:materialize@=0.99.0
+iron:router
