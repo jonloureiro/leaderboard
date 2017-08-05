@@ -11,3 +11,31 @@ Template.leaderboard.events({
     console.log('Jogador '+this.name+' foi selecionado!')
   },
 });
+
+Template.leaderboardform.events({
+  'submit form': function(event){
+    event.preventDefault();
+    Meteor.call('createPlayer', event.target.playerName.value);
+    event.target.playerName.value = "";
+  },
+});
+
+Template.buttons.helpers({
+  'selectedPlayer': function() {
+    return PlayersList.findOne({ _id: Session.get('selectedPlayer')})
+  },
+});
+
+Template.buttons.events({
+  'click .increment': function(event) {
+    Meteor.call('updateScore', Session.get('selectedPlayer'), 5);
+  },
+
+  'click .decrement': function(event) {
+    Meteor.call('updateScore', Session.get('selectedPlayer'), -5);
+  },
+
+  'click .remove': function(event) {
+    Meteor.call('remove', Session.get('selectedPlayer'));
+  },
+});
