@@ -1,5 +1,5 @@
 Template.leaderboard.helpers({
-  'player': function() {
+  'playerlist': function() {
     return PlayersList.find({ createdBy: Meteor.userId()}, { sort: {score: -1, name: 1} });
   },
 });
