@@ -2,15 +2,25 @@ Router.configure({layoutTemplate: 'layout'});
 
 Router.route('/', {
   template: 'home',
-  name: '-h',
+  name: 'hom',
 });
 
 Router.route('/todos', {
   template: 'todos',
-  name: '-t',
+  name: 'tod',
 });
 
 Router.route('/leaderboard', {
   template: 'leaderboard',
-  name: '-l',
+  name: 'lea',
+});
+
+Router.route('/register', {
+  template: 'register',
+  name: 'reg',
+});
+
+Router.route('/login', {
+  template: 'login',
+  name: 'log',
 });
