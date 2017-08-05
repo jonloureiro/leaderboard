@@ -1,0 +1,30 @@
+<template name="footer">
+  <br><br>
+  <div class="grey-text text-darken-1 container">
+    Copyright (c) 2017 Jonathan Loureiro de Moraes
+    <a class="grey-text text-darken-1 right" href="https://github.com/jonloureiro/leaderboard/blob/master/LICENSE">MIT License</a>
+  </div>
+</template>
+
+<template name="navbar">
+  <nav>
+    <div class="nav-wrapper grey darken-3">
+      <a href="#" class="brand-logo center text-lighten-3">Learning</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        {{> linksmenu}}
+      </ul>
+      <div class="left">{{> loginButtons}}</div>
+    </div>
+  </nav>
+  <br><br>
+</template>
+
+<template name="layout">
+  <div class="page-flexbox-wrapper">
+    {{> navbar}}
+    <div class="box center">
+      {{> yield}}
+    </div>
+    {{> footer}}
+  </div>
+</template>

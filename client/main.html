@@ -6,12 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<template name="main">
-  <div class="page-flexbox-wrapper">
-    {{> navbar}}
-    <div class="box center">
-      {{> yield}}
-    </div>
-    {{> footer}}
+<template name="linksmenu">
+  {{#if currentUser}}
+    <li><a href="{{pathFor route='-h'}}"><i class="material-icons">home</i>Início</a></li>
+    <li><a href="{{pathFor route='-l'}}"><i class="material-icons">assignment</i>Leaderboard</a></li>
+    <li><a href="{{pathFor route='-t'}}"><i class="material-icons">assignment</i>Todos</a></li>
+  {{else}}
+  {{/if}}
+</template>
+
+<template name="home">
+  Welcome
+</template>
+
+<template name="leaderboard">
+  <div class="card">
+    <h4>Leaderboard</h4>
+    {{> leaderboardform}}
+    <ul>
+      {{#each player}}
+        <li class="player">{{name}}: {{score}}</li>
+      {{/each}}
+    </ul>
+    {{> buttons}}
   </div>
+</template>
+
+<template name="todos">
+  <div class="card">
+    <h4>Todos</h4>
+    {{> todosform}}
+    <ul>
+      {{#each todo}}
+          {{> todoitem}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="todoitem">
+    <li>{{name}}</li>
 </template>
