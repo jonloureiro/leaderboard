@@ -1,7 +1,7 @@
 <template name="footer">
   <br><br>
   <div class="grey-text text-darken-1 container">
-    Copyright (c) 2017 Jonathan Loureiro de Moraes
+    Copyright (c) 2017 <a class="grey-text text-darken-1" href="https://github.com/jonloureiro/">Jonathan Loureiro de Moraes</a>
     <a class="grey-text text-darken-1 right" href="https://github.com/jonloureiro/leaderboard/blob/master/LICENSE">MIT License</a>
   </div>
 </template>
@@ -9,11 +9,11 @@
 <template name="navbar">
   <nav>
     <div class="nav-wrapper grey darken-3">
-      <a href="#" class="brand-logo center text-lighten-3 hide-on-med-and-down">Learning</a>
-      <ul id="nav-mobile" class="left">
+      <a href="{{pathFor route='-h'}}" class="brand-logo center text-lighten-3 hide-on-med-and-down">Learning</a>
+      <ul id="nav-mobile" class="right">
         {{> linksmenu}}
       </ul>
-      <div class="left">{{> loginButtons}}</div>
+      <div class="left" style="text-indent: 15px;">{{> loginButtons}}</div>
     </div>
   </nav>
   <br><br>
