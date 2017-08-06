@@ -78,30 +78,6 @@ div.cardlogin {
   margin: 3px;
 }
 
-.increment:hover {
-  background-color: #5a95f5 !important;
-  color: #fff;
-}
-
-.remove:hover {
-  background-color: #ef5350 !important;
-  color: #fff;
-}
-
-.decrement:hover {
-  background-color: #ffab40 !important;
-  color: #fff;
-}
-
-@media only screen and (max-width: 768px) {
-  .increment:hover,
-  .remove:hover,
-  .decrement:hover, {
-    background-color: var(--cor-pri) !important;
-    color: #fff;
-  }
-}
-
 .register .btn,
 .login .btn {
   float: right;
