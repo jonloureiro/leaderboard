@@ -28,6 +28,7 @@
 </template>
 
 <template name="layout">
+  {{#if currentUser}}
   <div class="page-flexbox-wrapper">
     {{> navbar}}
     <div class="box center">
@@ -35,4 +36,12 @@
     </div>
     {{> footer}}
   </div>
+  {{else}}
+    <div class="page-flexbox-wrapper">
+      <div class="box center" style="margin: auto">
+        {{> yield}}
+      </div>
+      {{> footer}}
+    </div>
+  {{/if}}
 </template>

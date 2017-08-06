@@ -30,7 +30,7 @@ div.card {
   position: relative;
   display: inline-block;
   margin: 10px 10px 10px;
-  border-radius: 5px;
+  border-radius: 0px;
   color: #797979;
   width: 680px;
 }
@@ -39,6 +39,10 @@ div.card {
     width: 99%;
     margin: 10px auto 10px;
   }
+}
+
+div.card2 {
+  width: 340px;
 }
 
 .card h4 {
@@ -73,9 +77,13 @@ div.card {
   background-color: #424242;
 }
 
-.login .btn,
-.register .btn {
+.login .btn {
   float: right;
+}
+
+.register .btn {
+  width: 115.3px;
+  vertical-align: middle;
 }
 
 /********** ICONS **********/
