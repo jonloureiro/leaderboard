@@ -9,22 +9,28 @@
 <template name="navbar">
   <nav>
     <div class="nav-wrapper grey darken-3">
-      <a href="{{pathFor route='hom'}}" class="brand-logo center text-lighten-3 hide-on-med-and-down">Learning</a>
-      <div class="hide-on-med-and-down">
+      <div class="left" style="text-indent: 15px; color: #fff;">
+      </div>
+      <a href="{{pathFor route='hom'}}" class="brand-logo center text-lighten-3">Learning</a>
+      <div class="hide-on-med-and-up">
+        <ul id="slide-out" class="side-nav"><br>
+          {{> navigation}}
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large" style="text-indent: 15px;">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+      <div class="hide-on-small-only">
         <ul id="nav-mobile" class="right" style="text-indent: 10px;">
           {{> navigation}}
         </ul>
-        <div class="left" style="text-indent: 15px;">{{> loginButtons}}</div>
-      </div>
-      <div class="hide-on-med-and-up">
-        <ul id="nav-mobile" class="right">
-          {{> navigation2}}
-        </ul>
-        <div class="left" style="text-indent: 15px;">{{> loginButtons}}</div>
       </div>
     </div>
   </nav>
   <br>
+  <script>
+    $(function(){$(".button-collapse").sideNav();});
+  </script>
 </template>
 
 <template name="layout">

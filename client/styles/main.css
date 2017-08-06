@@ -34,18 +34,29 @@ div.card {
   color: #797979;
   width: 680px;
 }
-@media only screen and (max-width: 768px) {
-  div.card {
-    width: 99%;
-    margin: 10px auto 10px;
-  }
-}
 
 div.card2 {
   width: 340px;
 }
 
-.card h4 {
+@media only screen and (max-width: 768px) {
+  div.card,
+  div.card2 {
+    width: 99%;
+    margin: 10px auto 10px;
+  }
+}
+
+div.cardlogin {
+  width: 340px;
+}
+
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
   text-align: center;
 }
 
@@ -77,13 +88,9 @@ div.card2 {
   background-color: #424242;
 }
 
+.register .btn,
 .login .btn {
   float: right;
-}
-
-.register .btn {
-  width: 115.3px;
-  vertical-align: middle;
 }
 
 /********** ICONS **********/
