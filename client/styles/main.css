@@ -1,3 +1,7 @@
+:root {
+  --cor-pri: #546e7a; /*blue-grey darken-1*/
+}
+
 body {
   background-color: #eee ;
 }
@@ -18,6 +22,10 @@ div.box {
   margin: 0 auto auto;
   vertical-align: top;
   width: 95%;
+}
+
+.nav-wrapper {
+  background-color: var(--cor-pri); /*blue-grey*/
 }
 
 /********** CARDS **********/
@@ -58,12 +66,13 @@ div.cardlogin {
 .card h5,
 .card h6 {
   text-align: center;
+  color: var(--cor-pri);
 }
 
 /********** BUTTONS **********/
 
 .btn {
-  background-color: #424242;
+  background-color: var(--cor-pri) !important;
   display: inline-block;
   width: 45%;
   margin: 3px;
@@ -84,8 +93,13 @@ div.cardlogin {
   color: #fff;
 }
 
-.btn:focus {
-  background-color: #424242;
+@media only screen and (max-width: 768px) {
+  .increment:hover,
+  .remove:hover,
+  .decrement:hover, {
+    background-color: var(--cor-pri) !important;
+    color: #fff;
+  }
 }
 
 .register .btn,
