@@ -41,6 +41,10 @@ div.card {
   }
 }
 
+.card h4 {
+  text-align: center;
+}
+
 /********** BUTTONS **********/
 
 .btn {
@@ -67,6 +71,11 @@ div.card {
 
 .btn:focus {
   background-color: #424242;
+}
+
+.login .btn,
+.register .btn {
+  float: right;
 }
 
 /********** ICONS **********/
