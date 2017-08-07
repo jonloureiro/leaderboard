@@ -1,5 +1,5 @@
 <template name="playeritem">
-  <li class="player">{{name}}: {{score}}</li>
+  <li class="player {{selectedClass}}">{{name}}: {{score}}</li>
 </template>
 
 <template name="leaderboardform">
@@ -12,7 +12,7 @@
 </template>
 
 <template name="buttons">
-    <h5>Selected Player: {{selectedPlayer.name}}</h5>
+    <h6>Selected Player: {{selectedPlayer.name}}</h6>
     <div class="center">
     <button class="increment waves-effect waves-light btn">Ganhar 5 pontos</button>
     <button class="decrement waves-effect waves-light btn">Perder 5 pontos</button>

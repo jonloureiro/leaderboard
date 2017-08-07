@@ -15,6 +15,32 @@ Template.login.events({
     }
 });
 
+Template.password.events({
+  'submit form': function(event){
+    event.preventDefault();
+    var email = event.target.email.value;
+    Meteor.call(
+      'sendEmail',
+      email,
+      'Leaderboard-Todos <recuperarsenhajonathan@gmail.com>',
+      'Pediu para recuperar senha?',
+      'Hahahaha, é só um teste!\nEmail enviado pelo meteor :B',
+    );
+    Router.go('hom');
+  },
+});
+
+Template.codepsw.events({
+  'submit form': function(event){
+    event.preventDefault();
+    var code = event.target.code.value;
+    var password = event.target.password.value;
+    var password2 = event.target.password2.value;
+    console.log("Seu código: "+code+"\nSua senha: "+password+"\nSua confirmação de senha: "+password2);
+    Router.go('hom');
+  },
+});
+
 Template.register.events({
   'submit form': function(event){
     event.preventDefault();

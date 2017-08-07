@@ -56,7 +56,7 @@ div.card2 {
 }
 
 div.cardlogin {
-  width: 340px;
+  width: 320px;
 }
 
 .card h1,
@@ -96,6 +96,7 @@ div.cardlogin {
   background-color: #ef5350 !important; /*red lighten-1*/
 }
 
+.recpsw .btn,
 .register .btn,
 .login .btn {
   float: right;
@@ -126,4 +127,19 @@ div.cardlogin {
   font-style: normal;
   font-weight: 400;
   src: url(http://fonts.gstatic.com/s/materialicons/v27/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+/********** FORMS **********/
+
+.selected {
+  background-color: #eceff1; /*blue-grey lighten-5*/
+}
+
+li.player:hover {
+  background-color: #eceff1; /*blue-grey lighten-5*/
+  cursor: pointer !important;
+}
+
+.todoItem:hover {
+  background-color: black;
 }

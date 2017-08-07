@@ -23,4 +23,13 @@ Meteor.methods({
         });
       }
     },
+
+    'changeTodo': function(documentId, todoItem){
+      check([documentId, todoItem], [String]);
+      var currentUserId = Meteor.userId();
+      if(currentUserId){
+        Todos.update({ _id: documentId }, {$set: { name: todoItem }});
+        console.log(documentId + "_ Task changed to: " + todoItem);
+      }
+    },
 });

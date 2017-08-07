@@ -59,3 +59,27 @@ Router.route('/login', {
     }
   },
 });
+
+Router.route('/recpsw', {
+  template: 'password',
+  name: 'recpsw',
+  onBeforeAction() {
+    if (!Meteor.userId()) {
+      this.next();
+    } else {
+      this.render("home");
+    }
+  },
+});
+
+Router.route('/code', {
+  template: 'codepsw',
+  name: 'codepsw',
+  onBeforeAction() {
+    if (!Meteor.userId()) {
+      this.next();
+    } else {
+      this.render("home");
+    }
+  },
+});

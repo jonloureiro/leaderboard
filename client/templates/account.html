@@ -13,8 +13,8 @@
       <p><button type="submit" class="waves-effect waves-light btn">Entrar</button></p>
     </form>
     <div class="grey-text text-darken-1">
-      <p style="margin: 0px;">Não tem uma conta?</p>
-      <a href="{{pathFor route='reg'}}" class="grey-text text-darken-1"> Cadastre-se!</a>
+      <a href="{{pathFor route='recpsw'}}" class="grey-text text-darken-1">Esqueceu a senha?</a>
+      <a href="{{pathFor route='reg'}}" class="grey-text text-darken-1">Cadastre-se!</a>
     </div>
   </div>
 </template>
@@ -46,8 +46,45 @@
       <p><button type="submit" class="waves-effect waves-light btn">Confirmar</button></p>
     </form>
     <div class="grey-text text-darken-1">
-      <p style="margin: 0px;">Já tem uma conta?</p>
-      <a href="{{pathFor route='log'}}" class="grey-text text-darken-1" style="text-align: left;">Faça login!</a>
+      <p style="margin: 26.5px;"></p>
+      <a href="{{pathFor route='log'}}" class="grey-text text-darken-1" style="text-align: left;">← Voltar</a>
     </div>
+  </div>
+</template>
+
+<template name="formpassword">
+  <div class="card cardlogin">
+    <form class="recpsw">
+      <h4>Recuperar senha</h4><br>
+      <div class="input-field">
+        <input type="email" name="email" class="validate">
+        <label for="email">Digite seu email:</label>
+      </div>
+    </form><br>
+    <a href="{{pathFor route='log'}}" class="grey-text text-darken-1" style="text-align: left;">← Voltar</a>
+    <a href="{{pathFor route='codepsw'}}" class="grey-text text-darken-1 right">Tenho um código →</a>
+  </div>
+</template>
+
+<template name="formcode">
+  <div class="card cardlogin">
+    <form class="recpsw">
+      <h4>Recuperar senha</h4><br>
+      <div class="input-field">
+        <input type="text" name="code" class="validate">
+        <label for="code">Digite seu código:</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" class="validate">
+        <label for="password">Senha</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password2" class="validate">
+        <label for="password2" >Confirmação da senha</label>
+      </div>
+      <p><button type="submit" class="waves-effect waves-light btn">Confirmar</button></p>
+    </form>
+    <p style="margin: 26.5px;"></p>
+    <a href="{{pathFor route='log'}}" class="grey-text text-darken-1" style="text-align: left;">← Voltar</a>
   </div>
 </template>
