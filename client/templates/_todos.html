@@ -1,10 +1,22 @@
 <template name="todoitem">
   <div class="row">
-    [<a href="#" class="delete-todo">Delete</a>]
-    <div class="col s11 right">
-      <input type="text" value="{{name}}" class="todoItem">
-    </div>
+    <li>
+      <div class="col s1" style="margin: 18px auto auto;">
+        <input type="checkbox" class="filled-in checkbox" id="{{_id}}" {{checked}}>
+        <label for="{{_id}}"></label>
+      </div>
+      <div class="col s10">
+        <input  {{disabled}} type="text" value="{{name}}" class="todoItem {{disabled}}" style="margin: 0px;">
+      </div>
+      <a href="#" class="delete-todo" style="margin: 18px auto auto; float: left">Delete</a>
+    </li>
   </div>
+</template>
+
+<template name="todoscount">
+  {{#if totaltodos}}
+    {{totaltodos}}/{{todoscount}}
+  {{/if}}
 </template>
 
 <template name="todosform">

@@ -41,7 +41,7 @@
   <div class="card">
     <h4>Leaderboard</h4>
     {{> leaderboardform}}
-    <ul>
+    <ul class="collection">
       {{#each playerlist}}
         {{> playeritem}}
       {{/each}}
@@ -54,6 +54,7 @@
   <div class="card">
     <h4>Todos</h4>
     {{> todosform}}
+    <h6>{{> todoscount}}</h6>
     <ul>
       {{#each todo}}
           {{> todoitem}}

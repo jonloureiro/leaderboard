@@ -26,7 +26,7 @@ Template.password.events({
       'Pediu para recuperar senha?',
       'Hahahaha, é só um teste!\nEmail enviado pelo meteor :B',
     );
-    Router.go('hom');
+    Router.go('codepsw');
   },
 });
 
@@ -49,28 +49,32 @@ Template.register.events({
     var password = event.target.password.value;
     var password2 = event.target.password2.value;
     var code = event.target.code.value;
-    var verification = Meteor.call('verificationregister', code)
-    console.log(code+' '+verification);
-    /*if (verification == 1){*/
-      if (password == password2){
-        Accounts.createUser({
-          email: email,
-          password: password,
-          name: name,
-        });
-        Router.go('hom');
-      } else {
-        Bert.alert('As senhas precisam ser iguais', 'danger', 'growl-top-left');
-        event.target.password.value = '';
-        event.target.password2.value = '';
+    Meteor.call('verificationregister', code, function(error, result){
+      console.log(error,result);
+      var verification = result;
+
+      console.log(code+' '+verification);
+      if (verification){
+        if (password == password2){
+          Accounts.createUser({
+            email: email,
+            password: password,
+            name: name,
+          });
+          Router.go('hom');
+        } else {
+          Bert.alert('As senhas precisam ser iguais', 'danger', 'growl-top-left');
+          event.target.password.value = '';
+          event.target.password2.value = '';
+        }
       }
-    /*}
-    else {
-      Bert.alert('Código secreto incorreto!', 'danger', 'growl-top-left');
-        event.target.code.value = '';
-        event.target.password.value = '';
-        event.target.password2.value = '';
-    }*/
+      else {
+        Bert.alert('Código secreto incorreto!', 'danger', 'growl-top-left');
+          event.target.code.value = '';
+          event.target.password.value = '';
+          event.target.password2.value = '';
+      }
+    });
   }
 });
 

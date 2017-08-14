@@ -1,5 +1,9 @@
 <template name="playeritem">
-  <li class="player {{selectedClass}}">{{name}}: {{score}}</li>
+  {{#if selectedClass}}
+    <li class="player collection-item active">{{name}}: {{score}}</li>
+  {{else}}
+    <li class="player collection-item">{{name}}: {{score}}</li>
+  {{/if}}
 </template>
 
 <template name="leaderboardform">

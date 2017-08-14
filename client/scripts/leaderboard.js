@@ -8,9 +8,9 @@ Template.playeritem.helpers({
   'selectedClass': function(){
     var playerId = this._id;
     var selectedPlayer = Session.get('selectedPlayer');
-    if(playerId == selectedPlayer){
-      return "selected";
-    }
+    if(playerId == selectedPlayer)
+      return true;
+    else return false;
   },
 });
 
@@ -45,6 +45,7 @@ Template.buttons.events({
   },
 
   'click .remove': function(event) {
-    Meteor.call('remove', Session.get('selectedPlayer'));
+    if (window.confirm("Deseja remover "+Session.get('playerName')+"?"))
+      Meteor.call('remove', Session.get('selectedPlayer'));
   },
 });

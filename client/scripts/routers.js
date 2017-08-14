@@ -79,7 +79,7 @@ Router.route('/code', {
     if (!Meteor.userId()) {
       this.next();
     } else {
-      this.render("recpsw");
+      this.render("home");
     }
   },
 });

@@ -4,11 +4,11 @@ Meteor.methods({
     if (Keys.find({code: code1}).count()){
       console.log('Código correto!')
       return true;
-    } else {
-      console.log('Código errado!')
-      return false;
     }
+    console.log('Código errado!')
+    return false;
   },
+
   sendEmail(to, from, subject, text) {
     check([to, from, subject, text], [String]);
     this.unblock();
